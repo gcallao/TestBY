@@ -66,7 +66,7 @@ combo_total <- combo_total[combo_total$HVTA>0,]
 combo_total$id <- paste(combo_total$CEDI, combo_total$ZAC_PROD)
 row.names(combo_total) <- NULL
 
-# Lista de combinaciones a nivel agregado (2-4-2)
+# Lista de combinaciones a nivel agregado (2-4-3)
 combo_ag <- aggregate(data[,6], by = list(SUBREGION_CDA = data$SUBREGION_CDA, agrupacion = data$agrupacion,
                                            segmento_agrupado = data$segmento_agrupado, marca = data$marca,
                                            tamaño = data$tamaño, retornable = data$retornable)
