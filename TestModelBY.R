@@ -40,10 +40,8 @@ colnames(resumen) <- c("CALWEEK", "HVTA")
 plot(resumen$HVTA, type = "l")
 
 
-# Completar valores 0 del ratio de venta ajustada
+# Imputar valores 0 del ratio de venta ajustada
 data$ZAC_HVNA[data$CALWEEK>=202214] <- data$ZAC_HVTA[data$CALWEEK>=202214]
-data$HVNA_CU[data$CALWEEK>=202214] <- data$HVTA_CU[data$CALWEEK>=202214]
-
 
 # Generar data agregada a nivel nacional
 data_ag <- aggregate(data[,c(5,6)], by = list(SUBREGION_CDA = data$SUBREGION_CDA, agrupacion = data$agrupacion,
